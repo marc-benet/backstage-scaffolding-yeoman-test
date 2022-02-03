@@ -1,0 +1,10 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: backstage-scaffolding-yeoman-test
+  annotations:
+    github.com/project-slug: marc-benet/backstage-scaffolding-yeoman-test
+spec:
+  type: other
+  lifecycle: unknown
+  owner: backstage
