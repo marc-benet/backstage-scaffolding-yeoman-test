@@ -63,6 +63,7 @@ spec:
       input:
         namespace: 'org:codeowners'
         options:
+          name: '@{{ parameters.owner }}'
           codeowners: '@{{ parameters.owner }}'
 
     - id: publish
