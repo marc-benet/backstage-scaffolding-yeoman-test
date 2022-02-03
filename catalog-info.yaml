@@ -21,6 +21,13 @@ spec:
           ui:autofocus: true
           ui:options:
             rows: 5
+        random:
+          title: Random
+          type: string
+          description: random param
+          ui:autofocus: true
+          ui:options:
+            rows: 5
         owner:
           title: Owner
           type: string
