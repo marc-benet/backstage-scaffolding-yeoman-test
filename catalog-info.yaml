@@ -62,8 +62,9 @@ spec:
       action: run:yeoman
       input:
         namespace: 'org:codeowners'
+        args:
+          - '@{{ parameters.name }}'
         options:
-          name: '@{{ parameters.owner }}'
           codeowners: '@{{ parameters.owner }}'
 
     - id: publish
