@@ -68,9 +68,7 @@ spec:
       name: Yeoman
       action: run:yeoman
       input:
-        namespace: 'electron-flask'
-        args:
-          - 'NAME'
+        namespace: 'electron-flask:app'
         options:
           codeowners: '@{{ parameters.owner }}'
 
