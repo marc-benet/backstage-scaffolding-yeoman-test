@@ -25,7 +25,6 @@ spec:
           title: Random
           type: string
           description: random param
-          ui:autofocus: true
           ui:options:
             rows: 5
         owner:
@@ -70,7 +69,15 @@ spec:
       input:
         namespace: 'electron-flask:app'
         options:
-          codeowners: '@{{ parameters.owner }}'
+          name: '@{{ parameters.name }}'
+          description: '@{{ parameters.random }}'
+          authorName: '@{{ parameters.owner }}'
+          authorEmail: 'marc@marc.lol'
+          license: 'MIT'
+          keywords: '@{{ parameters.name }}, @{{ parameters.random }}, @{{ parameters.owner }}'
+          portFlask: 5000
+          initialUrlFlask: 'hello'
+          misc: ["electronLog", "macFullyQuit", "openDevTools"]
 
     - id: publish
       if: '{{ not parameters.dryRun }}'
