@@ -70,7 +70,7 @@ spec:
       input:
         namespace: 'electron-flask'
         args:
-          name: '@{{ parameters.name }}'
+          - 'NAME'
         options:
           codeowners: '@{{ parameters.owner }}'
 
