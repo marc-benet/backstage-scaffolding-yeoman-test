@@ -68,16 +68,8 @@ spec:
       action: run:yeoman
       input:
         namespace: 'electron-flask:app'
-        args:
-          - '@{{ parameters.name }}'
-          - '@{{ parameters.random }}'
-          - '@{{ parameters.owner }}'
-          - 'marc@marc.lol'
-          - 'MIT'
-          - '@{{ parameters.name }}, @{{ parameters.random }}, @{{ parameters.owner }}'
-          - '5000'
-          - 'hello'
-          - ["electronLog", "macFullyQuit", "openDevTools"]
+        options:
+          codeowners: '@{{ parameters.owner }}'
 
     - id: publish
       if: '{{ not parameters.dryRun }}'
