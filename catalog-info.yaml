@@ -68,16 +68,16 @@ spec:
       action: run:yeoman
       input:
         namespace: 'electron-flask:app'
-        args:
-          - '@{{ parameters.name }}'
-          - '@{{ parameters.random }}'
-          - '@{{ parameters.owner }}'
-          - 'marc@marc.lol'
-          - 'MIT'
-          - '@{{ parameters.name }}, @{{ parameters.random }}, @{{ parameters.owner }}'
-          - '5000'
-          - 'hello'
-          - ["electronLog", "macFullyQuit", "openDevTools"]
+        options:
+          name: '@{{ parameters.name }}'
+          description: '@{{ parameters.random }}'
+          authorName: '@{{ parameters.owner }}'
+          authorEmail: 'marc@marc.lol'
+          license: 'MIT'
+          keywords: '@{{ parameters.name }}, @{{ parameters.random }}, @{{ parameters.owner }}'
+          portFlask: 5000
+          initialUrlFlask: 'hello'
+          misc: ["electronLog", "macFullyQuit", "openDevTools"]
 
     - id: publish
       if: '{{ not parameters.dryRun }}'
